@@ -13,7 +13,8 @@
     "type-check": "tsc --noEmit",
     "check": "npm run lint && npm run type-check",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky install"
+    "prepare": "husky",
+    "prettier:fix": "prettier --write ."
   },
   "lint-staged": {
     "*.{ts,js}": [
@@ -22,6 +23,11 @@
     "*.{json,ts}": [
       "npm run prettier:fix"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
   "keywords": [],
   "author": "Satya Mishra",
