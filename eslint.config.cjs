@@ -24,18 +24,14 @@ module.exports = [
     },
     rules: {
       "prettier/prettier": "error",
-      "@typescript-eslint/no-unused-vars": [
-        "error",
-        { "argsIgnorePattern": "^_" }
-      ],
+      "@typescript-eslint/no-unused-vars": [ "error"  ],
       "@typescript-eslint/no-explicit-any": "error",
       "@typescript-eslint/explicit-module-boundary-types": "off",
-      "@typescript-eslint/strict-boolean-expressions": "warn",
       "@typescript-eslint/naming-convention": [
         "error",
         {
           "selector": "variable",
-          "format": ["camelCase", "UPPER_CASE", "PascalCase"]
+          "format": ["camelCase", "PascalCase"]
         },
         { "selector": "function", "format": ["camelCase", "PascalCase"] },
         { "selector": "class", "format": ["PascalCase"] },
