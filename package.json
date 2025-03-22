@@ -1,0 +1,62 @@
+{
+  "name": "lms-backend",
+  "version": "1.0.0",
+  "main": "server.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "lint": "eslint 'src/**/*.{ts,tsx}' --fix",
+    "lint:fix": "eslint 'src/**/*.ts' --fix",
+    "format": "prettier --write 'src/**/*.ts'",
+    "type-check": "tsc --noEmit",
+    "check": "npm run lint && npm run type-check",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{ts,js}": [
+      "npm run lint:fix"
+    ],
+    "*.{json,ts}": [
+      "npm run prettier:fix"
+    ]
+  },
+  "keywords": [],
+  "author": "Satya Mishra",
+  "description": "LMS Backend API using Node.js, Express, and MongoDB",
+  "license": "LMS",
+  "dependencies": {
+    "@eslint/js": "^9.23.0",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.12.2",
+    "typescript-eslint": "^8.27.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "@types/cors": "^2.8.17",
+    "@types/eslint": "^9.6.1",
+    "@types/express": "^5.0.1",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/node": "^22.13.11",
+    "@typescript-eslint/eslint-plugin": "^8.27.0",
+    "@typescript-eslint/parser": "^8.27.0",
+    "eslint": "^9.23.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.2.3",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
+    "nodemon": "^3.1.9",
+    "prettier": "^3.5.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  }
+}

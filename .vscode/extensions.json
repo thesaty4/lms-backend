@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint", // Linting support for JavaScript and TypeScript
+    "esbenp.prettier-vscode", // Code formatting using Prettier
+    "streetsidesoftware.code-spell-checker", // Spell checking in code
+    "wix.vscode-import-cost", // Displays the cost of imported modules
+    "editorconfig.editorconfig", // Ensures consistent coding styles across editors
+    "github.vscode-pull-request-github", // GitHub integration for pull requests
+    "eamodio.gitlens", // Git insights and history tracking
+    "shardulm94.trailing-spaces", // Highlights and removes unnecessary trailing spaces
+    "yzhang.markdown-all-in-one", // Improves Markdown support for documentation
+    "gruntfuggly.todo-tree", // Highlights TODO comments in the project
+    "ms-vscode.vscode-typescript-tslint-plugin", // Additional TypeScript linting support
+    "firsttris.vscode-jest-runner" // Runs Jest tests inside VS Code
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  // "compileOnSave": false,
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "ESNext",
+    "outDir": "./dist",
+    "rootDir": ".",
+
+    // Strict Type-Checking Options
+    "strict": true,
+
+    "noImplicitAny": true, // Raise error on expressions and declarations with an implied 'any' type.
+    "strictNullChecks": true, // Enable strict null checks.
+    "noImplicitThis": true, // Raise error on 'this' expressions with an implied 'any' type.
+    "alwaysStrict": true, // Parse in strict mode and emit "use strict" for each source file.
+
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "typeRoots": ["node_modules/@types"],
+    "skipLibCheck": true,
+
+    // Additional Checks
+    "noUnusedLocals": true, // Report errors on unused locals.
+    "noUnusedParameters": true, // Report errors on unused parameters.
+
+    "baseUrl": "./",
+    "paths": {
+      "@config/*": ["src/config/*"],
+      "@shared/*": ["src/shared/*"],
+      "@modules/*": ["src/modules/*"]
+    }
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}
