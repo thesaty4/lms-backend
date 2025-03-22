@@ -38,16 +38,34 @@ lms-backend/
 │── tsconfig.json
 │── README.md
 
-# 🚀 Commit Message Guidelines with Husky & Commitlint
+# Commit Message Guidelines
 
-This project follows a structured commit message convention using **Husky** and **Commitlint** to ensure better commit history and collaboration.
+To maintain a clean and structured commit history, follow the **Conventional Commits** format.
 
-## 📌 Setup Instructions
+## **Commit Message Format**
 
-### 1️⃣ Install Dependencies
+- **`<type>`**: The category of the commit (see list below).
+- **`<scope>`**: A short descriptor of the area affected (optional but recommended).
+- **`<subject>`**: A concise description of the change (sentence-case, no period).
 
-Run the following command to install **Husky** and **Commitlint**:
+## **Allowed Commit Types**
 
-```sh
-npm install --save-dev husky @commitlint/{config-conventional,cli}
-```
+| Type       | Description                                      |
+| ---------- | ------------------------------------------------ |
+| `feat`     | New feature                                      |
+| `fix`      | Bug fix                                          |
+| `docs`     | Documentation update                             |
+| `style`    | Code style changes (formatting, no logic change) |
+| `refactor` | Refactoring code (no new feature, no bug fix)    |
+| `perf`     | Performance improvements                         |
+| `test`     | Adding or updating tests                         |
+| `chore`    | Maintenance tasks                                |
+| `ci`       | Continuous Integration changes                   |
+| `build`    | Build-related changes                            |
+| `revert`   | Reverting a previous commit                      |
+| `init`     | Initial commit                                   |
+
+## **Examples**
+
+> "feat: this is good commit"
+> "this is bad commit"
