@@ -1,60 +1,50 @@
-// {
-//   // "compileOnSave": false,
-//   "compilerOptions": {
-//     "target": "ES6",
-//     "module": "ESNext",
-//     "outDir": "./dist",
-//     "rootDir": ".",
-
-//     // Strict Type-Checking Options
-//     "strict": true,
-
-//     "noImplicitAny": true, // Raise error on expressions and declarations with an implied 'any' type.
-//     "strictNullChecks": true, // Enable strict null checks.
-//     "noImplicitThis": true, // Raise error on 'this' expressions with an implied 'any' type.
-//     "alwaysStrict": true, // Parse in strict mode and emit "use strict" for each source file.
-
-//     "esModuleInterop": true,
-//     "moduleResolution": "node",
-//     "allowSyntheticDefaultImports": true,
-//     "forceConsistentCasingInFileNames": true,
-//     "typeRoots": ["node_modules/@types"],
-//     "skipLibCheck": true,
-
-//     // Additional Checks
-//     "noUnusedLocals": true, // Report errors on unused locals.
-//     "noUnusedParameters": true, // Report errors on unused parameters.
-
-//     "baseUrl": "./",
-//     "paths": {
-//       "@config/*": ["src/config/*"],
-//       "@shared/*": ["src/shared/*"],
-//       "@modules/*": ["src/modules/*"]
-//     }
-//   },
-//   "include": ["src/**/*.ts"],
-//   "exclude": ["node_modules", "dist"]
-// }
-
 {
   "compilerOptions": {
+    // Specify the ECMAScript target version.
     "target": "ES2022",
+
+    // Use CommonJS module system (suitable for Node.js applications).
     "module": "CommonJS",
+
+    // Set the root directory of the source files.
     "rootDir": ".",
+
+    // Specify the output directory for compiled files.
     "outDir": "dist",
+
+    // Enable all strict type-checking options.
     "strict": true,
+
+    // Use Node.js module resolution strategy.
     "moduleResolution": "Node",
+
+    // Enable interoperability between CommonJS and ES modules.
     "esModuleInterop": true,
+
+    // Skip type checking of declaration files (*.d.ts) for performance.
     "skipLibCheck": true,
+
+    // Ensure consistent casing in imports to avoid case-related issues.
     "forceConsistentCasingInFileNames": true,
 
-    "baseUrl": "./src",
+    // Additional Checks
+    "noUnusedLocals": true, // Report errors when local variables are declared but not used.
+    "noUnusedParameters": true, // Report errors when function parameters are declared but not used.
+    "noImplicitAny": true, // Prevent implicit `any` type, enforcing explicit type definitions.
+    "strictNullChecks": true, // Ensure null and undefined are handled explicitly.
+
+    // Path Mapping for Module Aliases
+    "baseUrl": "./src", // Set the base path for module resolution.
     "paths": {
-      "@config/*": ["config/*"],
-      "@shared/*": ["shared/*"],
-      "@modules/*": ["modules/*"]
+      "@config/*": ["config/*"], // Alias for configuration-related modules.
+      "@shared/*": ["shared/*"], // Alias for shared utilities and components.
+      "@modules/*": ["modules/*"] // Alias for modularized application features.
     }
   },
+
+  // Specify which files to include in the TypeScript compilation.
   "include": ["src/**/*.ts"],
+
+  // Exclude certain folders from compilation.
   "exclude": ["node_modules", "dist"]
 }
