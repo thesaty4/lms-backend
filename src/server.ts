@@ -6,6 +6,8 @@ import 'module-alias/register';
 import connectDB from './config/db';
 import env from './config/env';
 import allRoutes from './routes';
+import { apiResponseType } from './shared/constants';
+import apiResponse from './shared/utils/api-response.util';
 
 const globalPrefix = `/${env.API_PREFIX}/${env.API_VERSION}`;
 
@@ -19,7 +21,10 @@ function bootstrap() {
 
   /** TODO: This is for testing - Returns a simple message */
   app.get('/', (_req, res) => {
-    res.status(200).json({ message: 'Welcome to the LMS' });
+    apiResponse(res, {
+      ...apiResponseType.SUCCESS,
+      data: { message: 'Welcome to the LMS' },
+    });
   });
 
   /** @middleware allRoutes will add all the routes */

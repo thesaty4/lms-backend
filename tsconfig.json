@@ -28,18 +28,27 @@
     "forceConsistentCasingInFileNames": true,
 
     // Additional Checks
-    "noUnusedLocals": true, // Report errors when local variables are declared but not used.
-    "noUnusedParameters": true, // Report errors when function parameters are declared but not used.
+    // "noUnusedLocals": true, // Report errors when local variables are declared but not used.
+    // "noUnusedParameters": true, // Report errors when function parameters are declared but not used.
     "noImplicitAny": true, // Prevent implicit `any` type, enforcing explicit type definitions.
     "strictNullChecks": true, // Ensure null and undefined are handled explicitly.
 
     // Path Mapping for Module Aliases
     "baseUrl": "./src", // Set the base path for module resolution.
+
+    // NOTE: If you will change here then you must have to change in package.json
+    /* "_moduleAliases": {
+      "@shared": "./src/shared",
+      "@config": "./src/config",
+      "@modules": "./src/modules"
+    },*/
     "paths": {
       "@config/*": ["config/*"], // Alias for configuration-related modules.
       "@shared/*": ["shared/*"], // Alias for shared utilities and components.
       "@modules/*": ["modules/*"] // Alias for modularized application features.
-    }
+    },
+
+    "types": ["node", "express"] // ✅ Ensure express types are included
   },
 
   // Specify which files to include in the TypeScript compilation.

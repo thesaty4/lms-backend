@@ -28,7 +28,9 @@
     }
   },
   "_moduleAliases": {
-    "@config": "./src/config"
+    "@shared": "./src/shared",
+    "@config": "./src/config",
+    "@modules": "./src/modules"
   },
   "keywords": [],
   "author": "Satya Mishra",
