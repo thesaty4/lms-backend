@@ -3,3 +3,7 @@ export interface IApiResponse<T = unknown> {
   message: string;
   data: T;
 }
+
+export interface IErrorResponse {
+  message: string;
+}

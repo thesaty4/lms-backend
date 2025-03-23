@@ -38,6 +38,52 @@ lms-backend/
 │── tsconfig.json
 │── README.md
 
+## MODULES
+
+modules
+│── blogs
+│ ├── controllers
+│ ├── middleware
+│ ├── models
+│ ├── services
+│ ├── types
+│ └── blogs.route.ts
+│── courses
+│ ├── controllers
+│ ├── middleware
+│ ├── models
+│ ├── services
+│ ├── types
+│ └── courses.route.ts
+│── categories
+│ ├── controllers
+│ ├── middleware
+│ ├── models
+│ ├── services
+│ ├── types
+│ └── categories.route.ts
+│── subcategories
+│ ├── controllers
+│ ├── middleware
+│ ├── models
+│ ├── services
+│ ├── types
+│ └── subcategories.route.ts
+│── enrollments
+│ ├── controllers
+│ ├── middleware
+│ ├── models
+│ ├── services
+│ ├── types
+│ └── enrollments.route.ts
+│── payments
+│ ├── controllers
+│ ├── middleware
+│ ├── models
+│ ├── services
+│ ├── types
+│ └── payments.route.ts
+
 # Commit Message Guidelines
 
 To maintain a clean and structured commit history, follow the **Conventional Commits** format.

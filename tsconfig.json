@@ -35,6 +35,13 @@
 
     // Path Mapping for Module Aliases
     "baseUrl": "./src", // Set the base path for module resolution.
+
+    // NOTE: If you will change here then you must have to change in package.json
+    /* "_moduleAliases": {
+      "@shared": "./src/shared",
+      "@config": "./src/config",
+      "@modules": "./src/modules"
+    },*/
     "paths": {
       "@config/*": ["config/*"], // Alias for configuration-related modules.
       "@shared/*": ["shared/*"], // Alias for shared utilities and components.

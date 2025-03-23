@@ -1,13 +1,8 @@
+import { createApiResponse } from '@shared/constants';
+import { IApiResponse, IErrorResponse } from '@shared/types';
+import apiResponse from '@shared/utils/api-response.util';
 import { Request, Response } from 'express';
-import { createApiResponse } from '../../../shared/constants';
-import { IApiResponse } from '../../../shared/types';
-import apiResponse from '../../../shared/utils/api-response.util';
 import { loginUser, registerUser } from '../services/auth.service';
-
-//TODO: Move to a shared file
-export interface IErrorResponse {
-  message: string;
-}
 
 export const register = async (req: Request, res: Response) => {
   let apiResponseData: IApiResponse;
