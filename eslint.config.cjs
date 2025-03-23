@@ -5,7 +5,7 @@ const tsParser = require('@typescript-eslint/parser'); // TypeScript parser for 
 const prettier = require('eslint-plugin-prettier'); // Integrates Prettier with ESLint
 const eslintImport = require('eslint-plugin-import'); // Helps with import/export syntax checking
 
-/** 
+/**
  * ESLint configuration using the new Flat Config API.
  * @type {import("eslint").Linter.FlatConfig[]}
  */
