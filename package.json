@@ -11,7 +11,7 @@
     "type-check": "tsc --noEmit",
     "check": "npm run lint && npm run type-check",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky",
+    "prepare": "husky && husky install",
     "prettier:fix": "prettier --write ."
   },
   "lint-staged": {
@@ -60,7 +60,7 @@
     "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-prettier": "^5.2.3",
-    "husky": "^9.1.7",
+    "husky": "^8.0.0",
     "joi": "^17.13.3",
     "lint-staged": "^15.5.0",
     "nodemon": "^3.1.9",
