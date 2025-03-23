@@ -35,9 +35,12 @@ module.exports = [
       // Enforce Prettier rules as ESLint errors
       'prettier/prettier': 'error',
 
-      // Warn on unused variables instead of erroring
-      '@typescript-eslint/no-unused-vars': ['warn'],
-
+      
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        { "vars": "all", "args": "after-used", "ignoreRestSiblings": false, "varsIgnorePattern": "^T" }
+      ],
+      
       // Disallow usage of 'any' type
       '@typescript-eslint/no-explicit-any': 'error',
 

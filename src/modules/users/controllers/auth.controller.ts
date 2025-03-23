@@ -1,4 +1,7 @@
 import { Request, Response } from 'express';
+import { createApiResponse } from '../../../shared/constants';
+import { IApiResponse } from '../../../shared/types';
+import apiResponse from '../../../shared/utils/api-response.util';
 import { loginUser, registerUser } from '../services/auth.service';
 
 //TODO: Move to a shared file
@@ -7,21 +10,39 @@ export interface IErrorResponse {
 }
 
 export const register = async (req: Request, res: Response) => {
+  let apiResponseData: IApiResponse;
   try {
     const { email, password, role } = req.body;
     const response = await registerUser(email, password, role);
-    res.status(201).json(response);
+    apiResponseData = createApiResponse('CREATED', {
+      message: 'User created successfully',
+      data: response,
+    });
   } catch (error) {
-    res.status(400).json({ error: (error as IErrorResponse).message });
+    apiResponseData = createApiResponse('BAD_REQUEST', {
+      message: 'User creation failed',
+      data: (error as IErrorResponse).message,
+    });
   }
+
+  apiResponse(res, apiResponseData);
 };
 
 export const login = async (req: Request, res: Response) => {
+  let apiResponseData: IApiResponse;
   try {
     const { email, password } = req.body;
     const response = await loginUser(email, password);
-    res.json(response);
+
+    apiResponseData = createApiResponse('SUCCESS', {
+      message: 'User logged in successfully',
+      data: response,
+    });
   } catch (error) {
-    res.status(401).json({ error: (error as IErrorResponse).message });
+    apiResponseData = createApiResponse('UNAUTHORIZED', {
+      data: { error: (error as IErrorResponse).message },
+    });
   }
+
+  apiResponse(res, apiResponseData);
 };
