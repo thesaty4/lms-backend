@@ -1,7 +1,5 @@
 import mongoose from 'mongoose';
 
-interface DType {}
-
 interface IUser extends mongoose.Document {
   email: string;
   password: string;

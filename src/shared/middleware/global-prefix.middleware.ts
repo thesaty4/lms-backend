@@ -1,13 +1,13 @@
 import env from '@config/env';
 import { NextFunction, Request, Response } from 'express';
 
-const GLOBAL_PREFIX = `/${env.API_PREFIX}/${env.API_VERSION}`;
+const globalPrefix = `/${env.API_PREFIX}/${env.API_VERSION}`;
 
 export const globalPrefixMiddleware = (
   req: Request,
-  res: Response,
+  _res: Response,
   next: NextFunction,
 ) => {
-  req.url = `${GLOBAL_PREFIX}${req.url}`;
+  req.url = `${globalPrefix}${req.url}`;
   next();
 };

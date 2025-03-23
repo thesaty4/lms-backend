@@ -1,8 +1,7 @@
+import env from '@config/env';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import User from '../models/user.model';
-
-const JWT_SECRET = process.env.JWT_SECRET as string;
 
 export const registerUser = async (
   email: string,
@@ -36,7 +35,7 @@ export const loginUser = async (email: string, password: string) => {
 
   const token = jwt.sign(
     { userId: user._id, email: user.email, role: user.role },
-    JWT_SECRET,
+    env.JWT_SECRET,
     {
       expiresIn: '1h',
     },
