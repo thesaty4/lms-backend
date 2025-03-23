@@ -1,4 +1,3 @@
-// eslint.config.js (CommonJS version)
 const js = require('@eslint/js');
 const tseslint = require('@typescript-eslint/eslint-plugin');
 const tsParser = require('@typescript-eslint/parser');
