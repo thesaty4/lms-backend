@@ -1,3 +1,5 @@
+import Joi from 'joi';
+import mongoose from 'mongoose';
 import { TForceAny } from '../types';
 
 /** @function filterObject, will be provide functionality to filter you object */
@@ -46,3 +48,10 @@ export function filterObject<
 
   return data as DType;
 }
+
+export const objectIdValidation = Joi.string().custom((value, helpers) => {
+  if (!mongoose.Types.ObjectId.isValid(value)) {
+    return helpers.error('any.invalid');
+  }
+  return value;
+}, 'ObjectId Validation');
